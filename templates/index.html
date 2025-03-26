@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Head Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Track Head Simulator</h1>
+        <form id="diskForm">
+            <label for="requests">Disk Access Requests (comma-separated):</label>
+            <input type="text" id="requests" name="requests" required>
+
+            <label for="start">Starting Position:</label>
+            <input type="number" id="start" name="start" required>
+
+            <label for="max_track">Max Track Value:</label>
+            <input type="number" id="max_track" name="max_track" required>
+
+            <label for="direction">Direction (only for SCAN and C-SCAN):</label>
+            <select id="direction" name="direction">
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+            </select>
+
+            <label for="algorithm">Scheduling Algorithm:</label>
+            <select id="algorithm" name="algorithm">
+                <option value="FCFS">FCFS</option>
+                <option value="SSTF">SSTF</option>
+                <option value="SCAN">SCAN</option>
+                <option value="C-SCAN">C-SCAN</option>
+            </select>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="result" class="result">
+            <p><strong>Total Seek Count: </strong><span id="seek_count"></span></p>
+            <p><strong>Average Seek Time: </strong><span id="avg_seek_time"></span></p>
+        </div>
+
+        <!-- Canvas for Graph -->
+        <div id="graph" class="graph">
+            <canvas id="diskMovementChart"></canvas>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
