@@ -100,17 +100,10 @@ We welcome contributions! If you'd like to contribute to this project, please fo
     ```
 7.  **Create a pull request** on the original repository.
 
-### Adding GitHub Users as Contributors
-
-To allow other GitHub users to contribute directly to this repository, you need to add them as collaborators. Here's how to do it through the GitHub interface:
-
-1.  Go to your repository on GitHub.
-2.  Click on the **Settings** tab.
-3.  In the left sidebar, click on **Collaborators**.
-4.  Click on the **Add collaborator** button.
-5.  Search for the GitHub username(s) of the person(s) you want to add. You can add multiple users.
-6.  Click **Add collaborator** next to each username.
-7.  The user(s) will receive an invitation to collaborate on your repository. Once they accept, they will have the permissions you've granted them (typically write access, allowing them to push changes directly).
+### Contributors
+* **Farhan Khureshi**
+* **Prince panchal**
+* **Keshav Raj**
 
 ## Future Improvements
 
